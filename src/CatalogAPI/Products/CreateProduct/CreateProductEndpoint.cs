@@ -16,7 +16,8 @@
 
                 return Results.Created($"/products/{response.Id}", response);
 
-            }).WithName("CreateProduct")
+            }).WithTags("Products")
+            .WithName("CreateProduct")
             .Produces<CreateProductResponse>(StatusCodes.Status201Created)
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Create Product")
