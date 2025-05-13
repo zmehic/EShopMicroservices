@@ -1,6 +1,7 @@
 using OrderingAPI;
 using OrderingApplication;
 using OrderingInfrastructure;
+using OrderingInfrastructure.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+app.UseApiServices();
+
+if (app.Environment.IsDevelopment())
+{
+    await app.InitialiseDatabaseAsync();
 }
 
 app.Run();
