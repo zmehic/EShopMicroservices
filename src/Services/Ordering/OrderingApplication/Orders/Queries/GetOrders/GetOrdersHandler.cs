@@ -1,9 +1,9 @@
 ﻿
 namespace OrderingApplication.Orders.Queries.GetOrders
 {
-    public class GetOrdersHandler(IApplicationDbContext dbContext) : IQueryHandler<GetOrderQuery, GetOrdersResult>
+    public class GetOrdersHandler(IApplicationDbContext dbContext) : IQueryHandler<GetOrdersQuery, GetOrdersResult>
     {
-        public async Task<GetOrdersResult> Handle(GetOrderQuery query, CancellationToken cancellationToken)
+        public async Task<GetOrdersResult> Handle(GetOrdersQuery query, CancellationToken cancellationToken)
         {
             var pageIndex = query.PaginationRequest.PageIndex;
             var pageSize = query.PaginationRequest.PageSize;
