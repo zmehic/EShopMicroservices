@@ -1,6 +1,7 @@
 using BasketAPI.Data;
 using BuildingBlocks.Behaviours;
 using BuildingBlocks.Exceptions.Handler;
+using BuildingBlocksMessaging.MassTransit;
 using DiscountgRPC;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -60,6 +61,8 @@ builder.Services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(
 
     return handler;
 });
+
+builder.Services.AddMessageBroker(builder.Configuration);
 
 //Cross-cutting Services
 builder.Services.AddValidatorsFromAssembly(assembly);
