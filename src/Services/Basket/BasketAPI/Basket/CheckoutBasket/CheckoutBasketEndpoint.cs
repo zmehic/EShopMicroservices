@@ -2,7 +2,7 @@
 
 namespace BasketAPI.Basket.CheckoutBasket
 {
-    public record CheckoutBasketRequest(BasketCheckoutDTO BasketCheckoutDTO);
+    public record CheckoutBasketRequest(BasketCheckoutDTO BasketCheckoutDto);
     public record CheckoutBasketResponse(bool IsSuccess);
     public class CheckoutBasketEndpoint : ICarterModule
     {

@@ -1,10 +1,7 @@
 ﻿using BuildingBlocksMessaging.Events;
 using MassTransit;
-using OrderingApplication.DTOs;
 using OrderingApplication.Orders.Commands.CreateOrder;
 using OrderingDomain.Enums;
-using System.Diagnostics.CodeAnalysis;
-using System.Runtime.CompilerServices;
 
 namespace OrderingApplication.Orders.EventHandlers.Integration
 {
